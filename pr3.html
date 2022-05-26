@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: gold;
+            }
+            #tb{
+                background-color: black;
+                color:white;
+                width:300px;
+                height:50px;
+                position: relative;
+                top:100px;
+                left:450px;
+                font-size: large;
+
+
+
+            }
+            .c{
+                background-color:rgb(23, 253, 176);
+                color:white;
+                position: relative;
+                left:440px;
+                top:105px;
+                width:60px;
+                height:50px;
+                font-size: xx-large;
+
+            }
+            .z{
+                color:black;
+                position: relative;
+                top:120px;
+                left:470px;
+                font-size: 40px;
+              
+                
+                
+            }
+            #l{
+                font-size: xx-large;
+                position: relative;
+                top:80px;
+                left:500px;
+            
+            }
+            
+        </style>
+    </head>
+    <body>
+        <p id="l">To Do List</p>
+        <div class="a">
+            <input type="text" id="tb" placeholder="type something...">
+            <input type="button" class="c" value="+">
+            
+        </div>
+        
+        <div class="z"></div>
+        <script>
+            const ad=()=>{
+                const x=document.querySelector('.c');
+                x.addEventListener('click',function()
+                {
+                    const para=document.createElement("p");
+                    const no=document.createTextNode(tb.value+"  ");
+                    para.appendChild(no);
+                    const ele=document.querySelector(".z");
+                    const parab=document.createElement("button");
+                    parab.style.color="black";
+                    parab.style.backgroundColor="red";
+                    parab.style.borderRadius="50px";
+                    parab.style.width="30px";
+                    parab.style.height="30px";
+                    parab.innerHTML='x';
+                    para.appendChild(parab);
+                   
+                    tb.value=null;
+                    parab.addEventListener('click',function(){
+                        para.remove();
+                    })
+                    ele.appendChild(para);
+                    
+
+                    
+
+
+
+                })
+
+            }
+
+                
+
+
+            ad();
+        </script>
+        
+
+        
+        
+        
+    </body>
+</html>
